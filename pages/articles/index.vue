@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1>Articles</h1>
-    <blockquote>Discover awesome articles taken from Unsplash pictures.</blockquote>
+    <blockquote>Discover beautiful articles from Unsplash pictures.</blockquote>
     <article v-for="article of articles" :key="article.slug">
       <NuxtLink :to="`/articles/${article.slug}`">
         <h3>{{ article.title }}</h3>
-        <img :src="article.imageUrl" width="150"/><br>
+        <img :src="article.imageUrl" width="150" />
       </NuxtLink>
     </article>
   </div>
@@ -23,4 +23,3 @@ export default {
   }
 }
 </script>
-

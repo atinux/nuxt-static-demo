@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{ article.title }}</h3>
+    <h1>{{ article.title }}</h1>
     <img :src="article.imageUrl" />
     <p>{{ article.body }}</p>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  async asyncData({ $strapi, params }) {
+  async asyncData({ params, $strapi }) {
     const article = await $strapi.$articles.findOne(params.slug)
 
     return { article }
