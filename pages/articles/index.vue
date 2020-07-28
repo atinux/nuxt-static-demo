@@ -17,6 +17,9 @@ export default {
     const articles = await $strapi.$articles.find()
 
     return { articles }
+  },
+  head: {
+    title: 'Articles'
   }
 }
 </script>

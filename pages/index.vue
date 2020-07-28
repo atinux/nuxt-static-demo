@@ -11,6 +11,11 @@ export default {
     const page = await $strapi.$pages.findOne('index')
 
     return { page }
+  },
+  head() {
+    return {
+      title: this.page.title
+    }
   }
 }
 </script>
