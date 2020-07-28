@@ -1,5 +1,6 @@
 export default {
   target: 'static',
+  plugins: ['~/plugins/preview.client.js'],
   modules: ['@nuxtjs/strapi'],
   strapi: {
     url: 'https://atinux-strapi.herokuapp.com',
